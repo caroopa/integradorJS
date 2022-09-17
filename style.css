@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
+:root {
+  --color-primario: #41506e;
+  --color-secundario: black;
+  --color-terciario: #d80027;
+  --color-cuarto: #220a3d;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -13,16 +20,28 @@ body {
   background: black;
 }
 
+button {
+  background-color: var(--color-terciario);
+  padding: 0.5rem;
+  border: 2px white solid;
+  border-radius: 2rem;
+}
+
+a:link,
+a:visited {
+  color: white;
+}
+
 /* ----------NAV---------- */
 
 nav {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--color-cuarto);
   color: white;
   padding: 0.5rem;
-  /* position: fixed;
+  position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100; */
+  z-index: 100;
 }
 
 ul {
@@ -44,7 +63,7 @@ li {
 
 .logo {
   margin: 2rem;
-  width: 50%;
+  width: 100px;
 }
 
 .cart-container {
@@ -55,7 +74,7 @@ li {
   height: 55px;
   line-height: 55px;
   border-radius: 100%;
-  background-color: #41506e;
+  background-color: var(--color-primario);
   margin-top: -10px;
   border: 1px solid black;
   font-size: large;
@@ -110,6 +129,7 @@ li {
   gap: 10rem;
   padding: 2rem;
   justify-content: center;
+  margin-top: 5rem;
 }
 
 .titulos {
@@ -128,6 +148,8 @@ li {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 1300px;
+  margin: 0 auto;
 }
 
 #filtros h1 {
@@ -144,10 +166,6 @@ li {
 .botones button {
   width: 150px;
   height: 60px;
-  background-color: brown;
-  padding: 0.5rem;
-  border: 2px white solid;
-  border-radius: 2rem;
 }
 
 /* ----------RANDOM---------- */
@@ -173,9 +191,11 @@ li {
 
 .bebida-card {
   width: 300px;
+  height: 500px;
   text-align: center;
-  background-color: #41506e;
+  background-color: var(--color-primario);
   padding: 2rem;
+  border-radius: 10px;
 }
 
 .bebida-card h1 {
@@ -198,16 +218,19 @@ li {
 }
 
 .btn-agregar {
-  background-color: brown;
   padding: 0.5rem;
   border: none;
   border-radius: 2rem;
 }
 
+.generar-mas-btn {
+  margin-top: 2rem;
+}
+
 /* ***** CARRITO ****** */
 
 .carrito {
-  background-color: dodgerblue;
+  background-color: var(--color-cuarto);
   width: 500px;
   font-size: 18px;
   font-weight: 300;
@@ -288,7 +311,7 @@ li {
   border: none;
   border-radius: 30px;
   background-color: rgba(65, 80, 110, 0.8);
-  box-shadow: 0 0 20px black;
+  box-shadow: 0 0 20px var(--color-secundario);
   color: white;
 }
 
@@ -316,5 +339,79 @@ li {
 
   .guarnicion2::after {
     width: 100px;
+  }
+}
+
+/* ***** FOOTER ***** */
+
+footer {
+  margin-top: 5rem;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10rem 8rem;
+  display: flex;
+}
+
+.v-line {
+  border-left: thick solid white;
+  height: 100%;
+  margin-left: 5rem;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.iconos {
+  height: 90%;
+  margin-left: 2rem;
+}
+
+.nombres {
+  margin-left: 2rem;
+  margin-top: 0.2rem;
+}
+
+.nombres p {
+  font-size: larger;
+  margin-bottom: 2.5rem;
+}
+
+.logo2 {
+  width: 200px;
+  height: 150px;
+}
+
+@media screen and (max-width: 900px) {
+  .v-line {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 2rem;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .footer-container {
+    margin-top: 2rem;
+    width: 250px;
+  }
+
+  .iconos {
+    margin-left: 0;
+    width: 30px;
+    /* height: 20px; */
+  }
+
+  .logo2 {
+    width: 250px;
+    height: 100%;
+  }
+
+  .nombres p {
+    font-size: 1rem;
   }
 }

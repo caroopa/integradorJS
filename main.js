@@ -60,3 +60,11 @@ botones.forEach((boton) => {
     }
   });
 });
+
+// **********************
+
+const generarMas = document.querySelector(".generar-mas-btn");
+
+generarMas.addEventListener("click", () => {
+  init();
+});
