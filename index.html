@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coctail World</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />  
+  </head>
+  <body>
+    <div class="carrito" data-visible="false">
+      <div class="carrito-titulo">
+        <div class="cart-container">
+          <i class="fa-solid fa-circle-xmark btn-cerrar"></i></>
+        </div>
+        <p class="titulo">Carrito de compras</p>
+      </div>
+      <div class="container-carrito"></div>
+      <div class="total">
+        <p class="precio-total">Subtotal:</p>
+        <p class="totall"></p>
+      </div>
+      <form action="direccion.php" method="POST">
+        <input type="hidden" name="total" id="caja-total" value="" >
+        <input type="hidden" name="productos" id="caja-productos" value="">
+        <button class="pagar" name="finalizar">FINALIZAR COMPRA</button>
+      </form>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.php"><img src="img/logo.png" alt="" class="logo" /></li></a>
+        <div class="items-container">
+          <li><a href="">Presentación</a></li>
+          <li><a href="">Productos</a></li>
+        </div>
+        <i class="fa-solid fa-bars barra"></i>
+        <div class="cart-container">
+            <i class="fa-solid fa-cart-shopping cart"></i>
+            <span id="checkout"></span>
+        </div>
+      </ul>
+    </nav>
+
+    <section id="inicio">
+      <div class="titulos">
+        <h1>¡Cóctel World!</h1>
+        <p>El mercado digital donde podés elegir el cóctel que quieras.</p>
+      </div>
+      <img src="img/coctel.png" alt="Cóctel">
+    </section>
+
+    <section id="filtros">
+      <h1>Filtros</h1>
+      <div class="botones">
+        <button class="category-btn">Todo</button>
+        <button class="category-btn">Ordinary Drink</button>
+        <button class="category-btn">Cocktail</button>
+        <button class="category-btn">Homemade Liqueur</button>
+        <button class="category-btn">Shot</button>
+        <button class="category-btn">Punch / Party Drink</button>
+        <button class="category-btn">Other/Unknown</button>
+        <button class="category-btn">Beer</button>
+        <button class="category-btn">Soft Drink</button>
+        <button class="category-btn">Cocoa</button>
+        <button class="category-btn">Coffee / Tea</button>
+        <button class="category-btn">Shake</button>
+      </div>
+    </section>
+
+    <section id="bebidas-random">
+      <h1 class="random">Selección de bebidas random</h1>
+      <img src="img/loading.gif" alt="" class="loading show" />
+      <div class="tbody"></div>
+    </section>
+    <script src="main.js"></script>
+    <script src="main1.js"></script>
+  </body>
+</html>
