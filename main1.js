@@ -1,8 +1,10 @@
 const menu = document.querySelector(".barra");
 const container = document.querySelector(".items-container");
+const nav = document.getElementById("nav");
 
 menu.addEventListener("click", () => {
   container.classList.toggle("show");
+  nav.classList.toggle("nav-height");
 });
 
 // **********************

@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --color-primario: #41506e;
+  --color-secundario: black;
+  --color-terciario: #d80027;
+  --color-cuarto: #220a3d;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: var(--color-secundario);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin-top: 5rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.container {
+  width: 350px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-cuarto);
+  padding: 1rem;
+  border-radius: 15px;
+  color: white;
+}
+
+button {
+  margin-top: 2rem;
+  width: 250px;
+  background-color: var(--color-terciario);
+  border: none;
+  color: white;
+  height: 3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+button:hover {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+input {
+  height: 3rem;
+  padding: 1rem;
+  border: none;
+  border-bottom: 1px solid var(--color-terciario);
+  border-radius: 4px;
+  background-color: var(--color-cuarto);
+  color: white;
+}
+
+input::placeholder {
+  opacity: 1;
+}
+
+input:focus {
+  border: 1px solid var(--color-terciario);
+  outline: none;
+}
+
+p {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-terciario);
+}
+
+.olvidaste {
+  text-align: right;
+  width: 250px;
+}
