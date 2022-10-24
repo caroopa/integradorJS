@@ -133,6 +133,21 @@ function sumarTotal() {
   }
 
   document.querySelector(".totall").innerHTML = `$${total}`;
-  document.getElementById("caja-total").value = total;
   return total;
 }
+
+// **********************
+
+const mostrarBtn = document.querySelector(".mostrar-btn");
+const containerBotones = document.querySelector(".botones");
+
+console.log(mostrarBtn);
+
+mostrarBtn.addEventListener("click", () => {
+  containerBotones.classList.toggle("show-botones");
+  if (containerBotones.classList.contains("show-botones")) {
+    mostrarBtn.innerHTML = "Ocultar";
+  } else {
+    mostrarBtn.innerHTML = "Mostrar";
+  }
+});

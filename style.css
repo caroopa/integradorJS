@@ -26,6 +26,7 @@ button {
   border: 2px white solid;
   border-radius: 2rem;
   cursor: pointer;
+  color: white;
 }
 
 button:hover {
@@ -97,6 +98,10 @@ li {
 }
 
 @media screen and (max-width: 1200px) {
+  nav {
+    height: 4rem;
+  }
+
   .barra {
     margin: 3rem 1.5rem;
     font-size: 3rem;
@@ -111,16 +116,27 @@ li {
     gap: 1rem;
   }
 
+  .cart-container,
+  .barra {
+    margin: 0;
+  }
+
+  .logo {
+    height: 40px;
+    width: 50px;
+    margin-top: 0;
+  }
+
   .show {
     display: flex;
   }
 
-  .cart-container {
-    margin: 3rem 3rem 0 0;
+  .nav-height {
+    height: 17rem;
   }
 
-  .nav-height {
-    height: 10rem;
+  .ocultar-barras {
+    display: none;
   }
 }
 
@@ -152,15 +168,15 @@ li {
     flex-direction: column;
     gap: 2rem;
     align-items: center;
+    height: 50vh;
   }
 
   #inicio img {
     width: 130px;
-    height: 200px;
   }
 
   .titulos {
-    margin-top: 5rem;
+    margin-top: 3rem;
   }
 }
 
@@ -180,17 +196,23 @@ li {
 }
 
 .botones {
+  display: none;
+}
+
+.botones button,
+.mostrar-btn {
+  width: 150px;
+  height: 60px;
+}
+
+.show-botones {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 0 4rem;
-}
-
-.botones button {
-  width: 150px;
-  height: 60px;
+  margin-top: 2rem;
 }
 
 /* ----------RANDOM---------- */
@@ -418,11 +440,12 @@ footer {
     padding: 5rem 2rem;
     justify-content: center;
     align-self: center;
+    width: 100%;
   }
 
   .footer-container {
     margin-top: 2rem;
-    width: 250px;
+    width: 100%;
   }
 
   .iconos {
@@ -432,11 +455,15 @@ footer {
   }
 
   .logo2 {
-    width: 250px;
+    width: 150px;
     height: 100%;
+    margin: 0 auto;
   }
 
-  .nombres p {
+  .nombres {
     font-size: 1rem;
+    text-align: center;
+    width: 100%;
+    margin: 0;
   }
 }
